@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    </head>
+    <body>
+
+        <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#pageheader" aria-expanded="false" class="collapsed">Get Online Banks </a><button id="sendreq" class="btn btn-primary">Send</button>
+                                </h4>
+                            </div>
+                            <div id="pageheader" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                <div class="panel-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <h3>All Currency</h3><code id="Endpoint1">/api/Common/OnlineBanks</code>
+                                            <h3>Per Currency</h3><code id="Endpoint2">/api/Common/OnlineBanks?currency=</code>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <!--                         <div class="panel-heading">
+                        Request and Result
+                    </div> -->
+                    <!-- .panel-heading -->
+                    <div class="panel-body">
+                        <div class="panel-group" id="reqres">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#reqres" href="#reqresdet" aria-expanded="true" class="">Request and Response</a>
+                                    </h4>
+                                </div>
+                                <div id="reqresdet" class="panel-collapse" aria-expanded="true" style="">
+                                    <div class="panel-body">
+                                        <div class="col-lg-6">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    Request
+                                                </div>
+                                                <div id="httprequest" class="panel-body">
+                                                    <code id="httprequest1"></code>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="panel panel-default">
+                                                <!-- <div class="panel-heading">
+                                                    Response
+                                                </div> -->
+                                                <div id="httpresponse" class="panel-body">
+                                                    <textarea readonly id="httpresponse1" class="form-control" rows="8" style="font-family: Consolas; font-size: 11px;"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- .panel-body -->
+                </div>
+                <!-- /.panel -->
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+
+        <script src="app/assets/js/calls/getOnlineBanks.js"></script>
+    </body>
+</html>

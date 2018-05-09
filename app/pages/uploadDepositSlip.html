@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    </head>
+    <body>
+        <div class="page-wrapper">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#pageheader" aria-expanded="false" class="collapsed">Upload Deposit Slip V2 </a><button id="sendreq" class="btn btn-primary">Send</button>
+                                </h4>
+                            </div>
+                            <div id="pageheader" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                <div class="panel-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <code id="Endpoint">/v2/api/Payment/UploadDepositSlip</code>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form>
+                <div class="row">
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <small for="TransactionNumber">PayWalo Transaction Number</small>
+                            <input autofocus type="text" class="form-control" id="TransactionNumber" placeholder="TransactionNumber">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <small for="ReferenceDepositDate">Reference Deposit Date</small>
+                            <input  type="text" class="form-control" id="ReferenceDepositDate">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <small for="ReferenceDepositAmount">Reference Deposit Amount</small>
+                            <input type="number" class="form-control" id="ReferenceDepositAmount">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <small for="ReferenceBankAccountNumber">Reference Bank Account Number</small>
+                            <input type="number" class="form-control" id="ReferenceBankAccountNumber">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <small for="ReferenceBankAccountName">Reference Bank Account Name</small>
+                            <input type="text" class="form-control" id="ReferenceBankAccountName">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <small for="ReferenceTransactionNumber">Bank Transaction Number</small>
+                            <input type="text" class="form-control" id="ReferenceTransactionNumber">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <small for="ReferenceDepositSlipImageURL">Reference Deposit Slip Image URL</small>
+                            <input type="text" class="form-control" id="ReferenceDepositSlipImageURL">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <small for="FileNameWithExtension">Image Filename With Extension</small>
+                            <input type="text" class="form-control" id="FileNameWithExtension">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <small for="Sign">Sign</small>
+                            <textarea readonly type="text" class="form-control" id="Sign" placeholder="Sign" rows="2"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <br>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <!--                         <div class="panel-heading">
+                        Request and Result
+                    </div> -->
+                    <!-- .panel-heading -->
+                    <div class="panel-body">
+                        <div class="panel-group" id="reqres">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#reqres" href="#reqresdet" aria-expanded="true" class="">Request and Response</a>
+                                    </h4><small>Requests Sent: </small><small id="sentreq"></small>
+                                    <a href="#" id="gatewayurl" target="_blank">Open QR Code Image</a>
+                                </div>
+                                <div id="reqresdet" class="panel-collapse" aria-expanded="true" style="">
+                                    <div class="panel-body">
+                                        <div class="col-lg-6">
+                                            <div class="panel panel-default">
+                                                <!-- <div class="panel-heading">
+                                                    Request
+                                                </div> -->
+                                                <div id="httprequest" class="panel-body">
+                                                    <code readonly id="httprequest1"></code>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="panel panel-default">
+                                                <!-- <div class="panel-heading">
+                                                    Response
+                                                </div> -->
+                                                <div id="httpresponse" class="panel-body">
+                                                    <textarea readonly id="httpresponse1" class="form-control" rows="8" style="font-family: Consolas; font-size: 11px;"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- .panel-body -->
+                </div>
+                <!-- /.panel -->
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <script src="app/assets/js/calls/uploadDepositSlip.js"></script>
+        <script src="node_modules/crypto-js/crypto-js.js"></script>
+    </body>
+</html>

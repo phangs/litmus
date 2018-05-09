@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Litmus</title>
+        <!-- Bootstrap Core CSS -->
+        <link href="app/assets/css/bootstrap.css" rel="stylesheet">
+        <!-- MetisMenu CSS -->
+        <link href="app/assets/css/metisMenu.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="app/assets/css/sb-admin-2.css" rel="stylesheet">
+        <!-- Morris Charts CSS -->
+        <!-- <link href="vendor/morrisjs/morris.css" rel="stylesheet"> -->
+        <!-- Custom Fonts -->
+        <link href="app/assets/css/font-awesome.css" rel="stylesheet" type="text/css">
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div id="wrapper">
+            <div class="panel panel-default">
+                <!--                         <div class="panel-heading">
+                    Credentials
+                </div> -->
+                <!-- .panel-heading -->
+                <div class="panel-body">
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" class="collapsed">Client and Server Settings     </a><i class="fa fa-caret-down"></i>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                <div class="panel-body">
+                                    <!-- Navigation -->
+                                    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+                                        <div class="navbar-header">
+                                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                            <span class="sr-only">Toggle navigation</span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                            </button>
+                                            <!-- <a class="navbar-brand" href="index.html">Litmus</a> -->
+                                        </div>
+                                        <form>
+                                            <div class="form-row navbar-left">
+                                                <div class="form-group col-md-2">
+                                                    <small for="platform">platform</small>
+                                                    <select class="form-control" id="platform">
+                                                        <option>WEB</option>
+                                                        <option>MOB</option>
+                                                        <option>APP</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-md-2">
+                                                    <small for="Server">Server</small>
+                                                    <select class="form-control" id="Server">
+                                                        <option id="http://stg.paywalo.com:8086">STG</option>
+                                                        <option id="http://prod.paywalo.com">PROD</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-md-2">
+                                                    <small for="ClientName">Client Name</small>
+                                                    <select class="form-control" id="ClientName">
+                                                        <option>Citron</option>
+                                                        <option>ba_test_client</option>
+                                                        <option>Orange88</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-md-2">
+                                                    <small for="Country">Country</small>
+                                                    <select class="form-control" id="Country">
+                                                        <option id="All">All</option>
+                                                        <option id="CNY">China</option>
+                                                        <option id="THB">Thailand</option>
+                                                        <option id="MYR">Malaysia</option>
+                                                        <option id="IDR">Indonesia</option>
+                                                        <option id="KRW">South Korea</option>
+                                                        <option id="VND">Vietnam</option>
+                                                        <option id="USD">United States</option>
+                                                        <option id="JPY">Japan</option>
+                                                        <option id="KHR">Cambodia</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-md-2">
+                                                    <small for="Currency">Currency</small>
+                                                    <input readonly type="text" class="form-control" id="Currency" placeholder="Currency" value="">
+                                                </div>
+                                                <div class="form-group col-md-1">
+                                                    <small for="norequests">Requests</small>
+                                                    <input type="number" class="form-control" id="norequests" placeholder="No. of Requests" value="1">
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <small for="ClientKey">Client Key</small>
+                                                    <input type="text" class="form-control" id="ClientKey" placeholder="Client Key">
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <small for="SecretKey">Secret Key</small>
+                                                    <input type="text" class="form-control" id="SecretKey" placeholder="Secret Key">
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <small for="Salt">Salt</small>
+                                                    <input type="text" class="form-control" id="Salt" placeholder="Salt">
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <small for="CallbackURL">Callback URL</small>
+                                                    <input type="text" class="form-control" id="CallbackURL" placeholder="Callback URL" value="https://hookb.in/EW8GXaRy">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <!-- <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </li> -->
+                        <li>
+                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Litmus</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Common Methods<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#" id="getPayMethods">Get Payment Methods</a>
+                                </li>
+                                <li>
+                                    <a href="#" id="getBankAccounts">Get Bank Accounts</a>
+                                </li>
+                                <li>
+                                    <a href="#" id="getBankAll">Get Banks (All)</a>
+                                </li>
+                                <li>
+                                    <a href="#" id="getBankDeposit">Get Banks (Deposit)</a>
+                                </li>
+                                <li>
+                                    <a href="#" id="getBankWithdrawal">Get Banks (Withdrawal)</a>
+                                </li>
+                                <li>
+                                    <a href="#" id="getOnlineBanks">Get Online Banks (PSP)</a>
+                                </li>
+                                <li>
+                                    <a href="#" id="checkDeposit">Check Deposit Status</a>
+                                </li>
+                                <li>
+                                    <a href="#" id="checkWithdrawal">Check Withdrawal Status</a>
+                                </li>
+                                <li>
+                                    <a href="#" id="generateSign">Generate Sign</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bank fa-fw"></i> Offline Methods<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#" id="offlineDepositV1">Offline Deposit Ver. 1</a>
+                                </li>
+                                <li>
+                                    <a href="#" id="offlineDepositV2">Offline Deposit Ver. 2</a>
+                                </li>
+                                <li>
+                                    <a href="#" id="#"><del>Upload Deposit Slip Ver. 1</del></a>
+                                </li>
+                                <li>
+                                    <a href="#" id="uploadDepositSlip">Upload Deposit Slip Ver. 2</a>
+                                </li>
+                                <li>
+                                    <a href="#" id="offlineWithdrawal">Offline Withdrawal</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-credit-card fa-fw"></i> Online Methods<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#" id="onlineDeposit">Online Deposit</a>
+                                </li>
+                                <li>
+                                    <a href="#" id="onlineWithdrawal">Online Withdrawal</a>
+                                </li>
+                                <li>
+                                    <a href="#" id="onlineWeChat">Online WeChat</a>
+                                </li>
+                                <li>
+                                    <a href="#" id="onlineQQPay">Online QQ Pay</a>
+                                </li>
+                                <li>
+                                    <a href="#" id="onlineAlipay">Online Alipay</a>
+                                </li>
+                                <li>
+                                    <a href="#" id="onlineChinaUnionPay">China Union Pay</a>
+                                </li>
+                                <li>
+                                    <a href="#" id="directdeposit">Direct Deposit</a>
+                                </li>
+                                <li>
+                                    <a href="#" id="directwithdraw">Direct Withdraw</a>
+                                </li>
+                                <li>
+                                    <a href="#" id="venuspointdeposit">Venus Point - Deposit</a>
+                                </li>
+                                <li>
+                                    <a href="#" id="venuspointwithdrawal">Venus Point - Withdrawal</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-question fa-fw"></i> Other Methods<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#" id="offlineWeChatD">Offline WeChat - Deposit</a>
+                                </li>
+                                <li>
+                                    <a href="#" id="offlineWeChatW">Offline WeChat - Withdrawal</a>
+                                </li>
+                                <li>
+                                    <a href="#" id="offlineQQPayD">Offline QQ Pay - Deposit</a>
+                                </li>
+                                <li>
+                                    <a href="#" id="offlineQQPayW">Offline QQ Pay - Withdrawal</a>
+                                </li>
+                                <li>
+                                    <a href="#" id="offlineLineD">Offline Line Pay - Deposit</a>
+                                </li>
+                                <li>
+                                    <a href="#" id="offlineLineW">Offline Line Pay - Withdrawal</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                    </div>
+                    <!-- /.sidebar-collapse -->
+                </div>
+                <!-- /.navbar-static-side -->
+            </nav>
+            <div id="page-wrapper">
+                
+            </div>
+            <!-- /#page-wrapper -->
+        </div>
+        <!-- /#wrapper -->
+        <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+        <!-- jQuery -->
+        <script src="app/assets/js/jquery.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="app/assets/js/bootstrap.js"></script>
+        <!-- Metis Menu Plugin JavaScript -->
+        <script src="app/assets/js/metisMenu.js"></script>
+        <!-- Morris Charts JavaScript -->
+        <!-- <script src="vendor/raphael/raphael.min.js"></script> -->
+        <!-- <script src="vendor/morrisjs/morris.min.js"></script> -->
+        <!-- <script src="data/morris-data.js"></script> -->
+        <!-- Custom Theme JavaScript -->
+        <script src="app/assets/js/sb-admin-2.js"></script>
+        <script src="app/assets/js/litmus.js"></script>
+        <script src="app/assets/js/litmus-nav.js"></script>
+    </body>
+</html>
