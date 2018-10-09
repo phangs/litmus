@@ -1,0 +1,21 @@
+---
+openapi: 3.0.1
+info:
+  title: Payment Methods
+  description: Allows retrieval of payment methods used in conjunction with offline
+    bank deposit
+  version: 1.0.0
+paths:
+  /api/Common/GetPaymentMethod:
+    get:
+      summary: Retrieve a list of payment methods to be used for offline bank deposit
+      description: Retrieve a list of payment methods to be used for offline bank
+        deposit
+      responses:
+        200:
+          description: Success
+        401:
+          description: Missing authorization key
+    servers:
+    - url: http://stg.paywalo.com:8086
+      description: Staging Server
